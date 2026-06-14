@@ -1,18 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sau Cua Kinh Reply Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sau Cua Kinh Reply Assistant - Draft better TikTok replies</title>
+  <meta name="description" content="Sau Cua Kinh Reply Assistant helps TikTok creators import comments, generate AI-assisted reply suggestions, and manage a manual approval queue.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Sau Cua Kinh Reply Assistant</h1>
 
-  <p>
-    Sau Cua Kinh Reply Assistant helps creators manage TikTok comments,
-    draft suggested replies, and review responses before manual posting.
-  </p>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>
+        Sau Cua Kinh
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#safety" class="nav-link">Safety</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </nav>
 
-  <p><a href="terms.html">Terms of Service</a></p>
-  <p><a href="privacy.html">Privacy Policy</a></p>
+      <div class="nav-cta">
+        <a href="#workflow" class="btn btn-secondary btn-sm">View workflow</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Nav -->
+  <div class="mobile-nav">
+    <a href="#features" class="nav-link">Features</a>
+    <a href="#workflow" class="nav-link">Workflow</a>
+    <a href="#safety" class="nav-link">Safety</a>
+    <a href="terms.html" class="nav-link">Terms</a>
+    <a href="privacy.html" class="nav-link">Privacy</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="hero-tag-icon"></span>
+          Creator Productivity Tool
+        </div>
+        <h1 class="hero-title">
+          Draft better TikTok replies — <span>review everything</span> before posting.
+        </h1>
+        <p class="hero-description">
+          Sau Cua Kinh Reply Assistant helps creators import comments, generate AI-assisted reply suggestions, and manage a manual approval queue. No automatic posting. No spam automation.
+        </p>
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">See how it works</a>
+          <a href="privacy.html" class="btn btn-secondary">Read privacy policy</a>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Mockup Dashboard -->
+      <div class="hero-visual" id="demo">
+        <div class="dashboard-mockup">
+          <div class="dashboard-header">
+            <div class="dashboard-status">
+              <span class="status-indicator"></span>
+              Workspace (Manual MVP)
+            </div>
+            <div class="dashboard-dots">
+              <span class="dashboard-dot"></span>
+              <span class="dashboard-dot"></span>
+              <span class="dashboard-dot"></span>
+            </div>
+          </div>
+          <div class="dashboard-body">
+            
+            <!-- Mock Comments list -->
+            <div class="mock-comment-section">
+              <div class="section-label">Select Comment</div>
+              <div id="mock-comments-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <!-- Placed dynamically via JS -->
+              </div>
+            </div>
+
+            <!-- Mock AI Suggestions list -->
+            <div class="mock-ai-section">
+              <div class="section-label">AI Reply Suggestions</div>
+              <div id="mock-suggestions-container">
+                <!-- Placed dynamically via JS -->
+              </div>
+            </div>
+
+            <!-- Reminder bar -->
+            <div class="reminder-bar">
+              <span class="reminder-icon">💡</span>
+              <div class="reminder-text">
+                <strong>Manual Review Required:</strong> Copy your approved draft and paste it directly into TikTok. This tool does not post automatically.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Mock Toast Notification inside dashboard -->
+          <div class="mock-toast" id="mock-toast">
+            <span class="mock-toast-success-icon">✓</span>
+            <span id="mock-toast-text">Reply copied!</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Compliance Note Banner -->
+  <section class="trust-banner">
+    <div class="container">
+      <div class="trust-card">
+        <div class="trust-badge-gradient">✓</div>
+        <div class="trust-text">
+          Designed for <span>manual review workflows</span>. It does not automatically post comments or replies on TikTok.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need, nothing you don't</h2>
+      <p class="section-subtitle">A simple, effective, and safe environment designed to accelerate your engagement rate while keeping you in complete control.</p>
+      
+      <div class="grid grid-3">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Import comments</h3>
+          <p class="feature-desc">Quickly import lists of comments via copy-paste or CSV backups. Get organized in seconds without linking sensitive credentials.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card f-accent">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI reply drafts</h3>
+          <p class="feature-desc">Generate relevant, tailored, and authentic reply options based on context, so you never stare at a blank box again.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Manual approval queue</h3>
+          <p class="feature-desc">Keep comments grouped systematically. Review, edit, and approve each generated suggestion one by one at your own pace.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Edit before copying</h3>
+          <p class="feature-desc">Full interactive text editing allowed on all drafts. Tweak words, add emojis, or adjust the tone before copying the text.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Status tracking</h3>
+          <p class="feature-desc">Visually track completed comments, copied drafts, and skipped items. Avoid repeating replies or missing active followers.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">CSV export & backup</h3>
+          <p class="feature-desc">Export your finalized queue drafts back into a CSV file for archival reference or external loading programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Section -->
+  <section class="section workflow-section" id="workflow">
+    <div class="container">
+      <h2 class="section-title">How the workflow works</h2>
+      <p class="section-subtitle">No automated bots. No background posting. You remain in complete charge of your digital identity.</p>
+
+      <div class="workflow-container">
+        <!-- Step 1 -->
+        <div class="workflow-step">
+          <span class="step-num-badge">1</span>
+          <div class="step-info">
+            <h3 class="step-title">Import or paste</h3>
+            <p class="step-desc">Input comments manually or import via spreadsheets to create your local drafting queue.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="workflow-step">
+          <span class="step-num-badge">2</span>
+          <div class="step-info">
+            <h3 class="step-title">Generate AI drafts</h3>
+            <p class="step-desc">Our context-aware generator reads the comment and prepares tailored response ideas.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="workflow-step">
+          <span class="step-num-badge">3</span>
+          <div class="step-info">
+            <h3 class="step-title">Review & edit</h3>
+            <p class="step-desc">Refine the phrasing, correct emojis, and approve the suggestion to fit your voice.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="workflow-step">
+          <span class="step-num-badge">4</span>
+          <div class="step-info">
+            <h3 class="step-title">Copy & post</h3>
+            <p class="step-desc">Copy your finished draft to your clipboard, open TikTok, and manually hit reply.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Section -->
+  <section class="section safety-section" id="safety">
+    <div class="container">
+      <div class="safety-card">
+        <div class="safety-card-header">
+          <div class="safety-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h2 class="safety-card-title">Safety & Creator Compliance</h2>
+        </div>
+
+        <div class="safety-grid">
+          <!-- Item 1 -->
+          <div class="safety-item">
+            <span class="safety-check-icon">✓</span>
+            <div>
+              <h3 class="safety-item-title">No automatic posting</h3>
+              <p class="safety-item-desc">We never write back to TikTok automatically. Your credentials and cookies are completely safe from API write violations.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="safety-item">
+            <span class="safety-check-icon">✓</span>
+            <div>
+              <h3 class="safety-item-title">No cookie-based logins</h3>
+              <p class="safety-item-desc">We never ask you to share session cookies or browser credentials. Avoid standard security leaks.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="safety-item">
+            <span class="safety-check-icon">✓</span>
+            <div>
+              <h3 class="safety-item-title">Zero automated scraping</h3>
+              <p class="safety-item-desc">The app runs strictly on manual comment inputs, adhering completely to TikTok platform constraints and policies.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="safety-item">
+            <span class="safety-check-icon">✓</span>
+            <div>
+              <h3 class="safety-item-title">Human-in-the-loop control</h3>
+              <p class="safety-item-desc">The creator makes all final decisions. You have the ultimate responsibility for what gets published on your channel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo / Integration Status Section -->
+  <section class="section status-section">
+    <div class="container">
+      <div class="status-card">
+        <div class="status-header-tag">MVP Phase</div>
+        <h2 class="status-card-title">Current Mode: Manual Workflow MVP</h2>
+        <p class="status-card-desc">We prioritize safety and platform compatibility above all else.</p>
+        
+        <div class="status-list">
+          <div class="status-list-item">
+            <span class="status-bullet"></span>
+            <p>TikTok API integration is not enabled yet. Everything remains locally processed.</p>
+          </div>
+          <div class="status-list-item">
+            <span class="status-bullet"></span>
+            <p>Official TikTok Login integrations may be added in future updates if properly approved.</p>
+          </div>
+          <div class="status-list-item">
+            <span class="status-bullet"></span>
+            <p>The current workflow focuses purely on manual comment imports and local AI reply drafts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-dot"></span>
+            Sau Cua Kinh
+          </div>
+          <p class="footer-desc">AI-assisted productivity workflows designed specifically for modern TikTok creators.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#safety">Safety</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a style="cursor: default; pointer-events: none;">Contact: haquanghungson@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          <strong>Disclaimer:</strong> AI-generated replies are suggestions only. Creators are fully responsible for reviewing, modifying, and manually posting the final response drafts to TikTok.
+        </p>
+        <p class="footer-copy">&copy; 2026 Sau Cua Kinh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
